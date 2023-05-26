@@ -5,7 +5,7 @@ export default function Body(props) {
     return (
         <div className='h-[100vh] flex justify-center'>
             <div className='h-full w-[95vw] md:w-auto flex flex-col md:flex-row justify-evenly md:justify-evenly items-center'>
-                <div className={`flex-col w-[90%] md:w-[60%] order-2 md:${props.pos1} `}>
+                <div className={`flex-col w-[90%] md:w-[60%] order-2 `}>
                     <h1 className='text-[20px] md:text-[30px] font-semibold text-black'>
                         {props.headQ}
                     </h1>
@@ -21,7 +21,7 @@ export default function Body(props) {
                         </Link>
                     </div>
                 </div>
-                <img className={`w-[80%] md:w-1/4 h-fit order-1 md:${props.pos2} `} src={props.Imgs} alt="" />
+                <img className={`w-[80%] md:w-1/4 h-fit order-1  `} src={props.Imgs} alt="" />
             </div>
         </div>
     )
@@ -31,8 +31,6 @@ Body.propTypes = {
     headQ: PropTypes.string,
     datas: PropTypes.string,
     Imgs: PropTypes.string,
-    pos1: PropTypes.string,
-    pos2: PropTypes.string,
     visibilty1: PropTypes.string,
     visibilty2: PropTypes.string,
     btnPos: PropTypes.string,
