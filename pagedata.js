@@ -7,9 +7,9 @@ const Pts = {
     pt3: `There are many real-life applications of data structures. For example: Databases use data structures such as trees, heaps, and hash tables to store and retrieve data efficiently.Operating systems use data structures such as lists, queues, and stacks to manage tasks, processes, and memory.Web search engines use data structures such as inverted indexes and tries to index and search the web efficiently.Computer graphics use data structures such as binary trees, octrees, and meshes to represent and manipulate 3D objects.`
 };
 const Images = {
-    im1: '../images/R .png',
-    im2: '../images/data.png',
-    im3: '../images/data1.png'
+    im1: './images/R .png',
+    im2: './images/data.png',
+    im3: './images/data1.png'
 }
 const Btn = {
     btn1: "Try Data Structure Demo",
