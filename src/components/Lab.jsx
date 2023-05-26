@@ -42,13 +42,15 @@ export default function Lab() {
     return (
         <>
             <div className='box-border flex flex-col justify-center items-center w-[100%] pt-[10vh] md:pt-[15vh]'>
-                <h1 className='text-xl md:text-4xl text-left font-bold'>STACK OPERATION</h1>
-                <div className='box-border w-[95%] h-[40vh] md:h-[70vh] md:w-[70%] rounded-md flex flex-col items-center justify-center drop-shadow-2xl backdrop-blur-xl bg-gray-200 md:bg-sky-200 '>
-                    <input value={val} onChange={changes} type="text" placeholder='Enter your text' className='p-2 text-[#6a6a6a] focus:outline-sky-400 rounded-xl' />
-                    <div className='mt-2 flex justify-evenly '>
-                        <FcUndo style={{ fontSize: 35 }} className='mx-3' onClick={undoBtn} />
-                        <RiRestartFill style={{ fontSize: 35 }} className='mx-3 fill-sky-400' onClick={reset} />
-                        <FcRedo style={{ fontSize: 35 }} className='mx-3' onClick={redoBtn} />
+                <div className='w-[90vw] h-[40vh] md:h-[80vh] flex flex-col items-center'>
+                    <h1 className='text-xl md:text-4xl text-left font-bold'>STACK OPERATION</h1>
+                    <div className='box-border w-[95%] h-[80%] md:h-[80%] md:w-[70%] rounded-md flex flex-col items-center justify-center drop-shadow-2xl backdrop-blur-xl bg-gray-200 md:bg-sky-200 '>
+                        <input value={val} onChange={changes} type="text" placeholder='Enter your text' className='p-2 text-[#6a6a6a] focus:outline-sky-400 rounded-xl' />
+                        <div className='mt-2 flex justify-evenly '>
+                            <FcUndo style={{ fontSize: 35 }} className='mx-3' onClick={undoBtn} />
+                            <RiRestartFill style={{ fontSize: 35 }} className='mx-3 fill-sky-400' onClick={reset} />
+                            <FcRedo style={{ fontSize: 35 }} className='mx-3' onClick={redoBtn} />
+                        </div>
                     </div>
                 </div>
                 <div className='box-border w-[90%] flex flex-col rounded-md bg-slate-100 p-5 my-10 shadow-md'>
