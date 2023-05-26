@@ -3,7 +3,7 @@ export default function Module2() {
     return (
         <div className="w-[90vw] border-2 border-[#ff6633] md:w-[75vw] h-[80vh] p-2 md:bg-slate-50 rounded-xl overflow-y-scroll">
             <h1 className="text-xl md:text-2xl text-justify">Data structures have numerous real-life applications across various domains. Here are some examples:</h1>
-            <ol className="list-disc text-justify text-sm md:text-lg px-5">
+            <ol className="list-disc text-justify text-sm md:text-lg px-5 text-[#6a6a6a]">
                 <li>Databases: Data structures like B-trees and hash tables are fundamental components of databases. They enable efficient storage and retrieval of data, indexing, and querying.</li>
                 <li>File Systems: File systems utilize data structures such as directory trees, linked lists, and hash tables to organize and manage files, directories, and metadata.</li>
                 <li>Web Browsers: Data structures like caches (e.g., LRU cache) are used to store recently visited web pages, improving the performance of web browsers by reducing network requests</li>
