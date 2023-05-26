@@ -4,7 +4,7 @@ import Dropdown from './dropdown';
 
 export default function Navbar() {
     const githubLink = () => {
-        window.open('https://github.com/pauldebangan1970', '_blank');
+        window.open('https://github.com/pauldebangan1970/Data-Structure', '_blank');
     }
     const inLink = () => {
         window.open('https://www.linkedin.com/in/debangan-paul-chowdhury-2ba39822a/', '_blank');
