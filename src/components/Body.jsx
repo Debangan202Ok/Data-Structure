@@ -16,9 +16,9 @@ export default function Body(props) {
                         <Link to={props.links} className=''>
                             <button className={`py-2 px-4 w-[100%] ${props.visibilty1} ${props.btnC} text-white rounded-md transition ease-in-out delay-150  hover:bg-[#6a6a6a] duration-300 my-2 md:my-auto`}> {props.Btns1}</button>
                         </Link>
-                        <a>
+                        <Link to={props.link2}>
                             <button className={`border-2 w-[100%] bg-black ${props.visibilty2} hover:bg-white hover:border-2 transition ease-in-out delay-150 duration-300 hover:border-black  hover:text-black text-white px-5 py-2 rounded-md`}>{props.Btns2}</button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <img className={`w-[80%] md:w-1/4 h-fit order-1 md:${props.pos2} `} src={props.Imgs} alt="" />

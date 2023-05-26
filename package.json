@@ -13,6 +13,8 @@
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
     "bootstrap": "^5.2.3",
+    "flowbite": "^1.6.5",
+    "flowbite-react": "^0.4.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",

@@ -10,12 +10,15 @@ import {
 } from "react-router-dom";
 import Home from './components/Home';
 import Lab from './components/Lab';
+import Read from './components/Read';
+import Module2 from './components/Module2';
+import Module1 from './components/Module1';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -25,12 +28,26 @@ const router = createBrowserRouter([
         path: 'labs/',
         element: <Lab />
       },
+      {
+        path: 'read',
+        element: <Read />,
+        children: [
+          {
+            path: 'module1',
+            element: <Module1/>
+          },
+          {
+            path: 'module2',
+            element: <Module2 />
+          }
+        ]
+      },
     ],
-  }, 
+  },
   {
     path: "labs/",
     element: <Lab />
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
