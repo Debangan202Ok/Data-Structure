@@ -5,7 +5,7 @@ export default function Read() {
     const arr = [{ module: 'Module:1', id: crypto.randomUUID(), in: 1 }, { module: 'Module:2', id: crypto.randomUUID(), in: 2 }];
     return (
         <div className="pt-[10vh] flex flex-col md:flex-row items-center md:justify-evenly">
-            <nav className="hidden md:block w-[20vw] h-[85vh] rounded-xl bg-slate-50 shadow-xl inset-3 border-2 border-[#6a6a6a]">
+            <nav className="hidden md:block w-[20vw] h-[80vh] rounded-xl bg-slate-50 shadow-xl inset-3 border-2 border-[#6a6a6a]">
                 <ul className="flex flex-col">
                     <li className="bg-sky-200 p-3 border-b-2 border-[#6a6a6a] rounded-t-xl font-semibold">
                         INDEX
