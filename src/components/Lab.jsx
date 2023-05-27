@@ -1,6 +1,7 @@
 import { FcUndo, FcRedo } from 'react-icons/fc'
 import { RiRestartFill } from 'react-icons/ri'
 import { useState } from 'react'
+import { Helmet } from "react-helmet";
 
 export default function Lab() {
     const [val, setVal] = useState('');
@@ -41,6 +42,11 @@ export default function Lab() {
     }
     return (
         <>
+            <Helmet>
+                <title>Data Structure -lab</title>
+                <meta charSet='utf-8' />
+                <meta name="description" content="Discover the real-life applications of data structures and their significance in various domains. Explore how data structures such as arrays, linked lists, trees, graphs, and hash tables are used in designing efficient algorithms, optimizing database systems, building search engines, developing social networks, and solving complex computational problems. Learn how mastering data structures can enhance software performance, improve memory utilization, and enable robust data management." />
+            </Helmet>
             <div className='box-border flex flex-col justify-center items-center w-[100%] pt-[10vh] md:pt-[15vh]'>
                 <div className='w-[90vw] h-[40vh] md:h-[80vh] flex flex-col items-center'>
                     <h1 className='text-xl md:text-4xl text-left font-bold'>STACK OPERATION</h1>
