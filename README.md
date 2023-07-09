@@ -1,7 +1,7 @@
-<h1> Data-Structure </h1>
+<h1>Data-Structure </h1>
 
-<h2>this vite project is create for college skill-x presentation. but suddenly i thought that if i make it realistic and host it.</h2>
-<h3> it's minimal responsive so if anyone think some thing new so they can share with me.</h3>
+<h2 align="justify">This vite project is create for college skill-x presentation. but suddenly i thought that if i make it realistic and host it.</h2>
+<h3>It's minimal responsive so if anyone think some thing new so they can share with me.</h3>
 <img src='datastruc.png' />
 <ul type='none'>here i used:
   <li>1. vite.js</li>
