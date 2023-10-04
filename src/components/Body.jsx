@@ -31,9 +31,9 @@ export default function Body(props) {
             <Helmet>
                 <meta name="keywords" content={seoKeywords} />
             </Helmet>
-            <div className='h-auto md:h-screen py-5 flex items-center'>
-                <div className='flex flex-col p-2 md:flex-row justify-center md:justify-evenly items-center'>
-                    <div className={`flex-col p-2 w-[95%] h-auto  md:w-[65%] order-2 `}>
+            <div className='h-auto md:h-auto py-5 flex items-center'>
+                <div className='flex flex-col p-2 md:flex-row justify-center md:justify-evenly w-11/12 mx-auto items-center bg-white md:mt-32 rounded-xl shadow-md'>
+                    <div className={`flex-col p-2 w-[95%] h-auto md:w-[65%] order-2`}>
                         <h1 className='text-[20px] md:text-[30px] font-semibold text-black'>
                             {props.headQ}
                         </h1>
