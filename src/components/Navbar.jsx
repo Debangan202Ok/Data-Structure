@@ -14,7 +14,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-screen flex items-center justify-evenly fixed py-2 md:py-3 bg-[#f7f7f7] text-black tracking-wide shadow-xl z-50 top-0 ">
+    <nav className="w-screen flex items-center justify-evenly py-2 md:py-3 fixed bg-[#f7f7f7] text-black tracking-wide shadow-md top-0 z-50">
       <ul className="flex items-center mx-5">
         <li className="font-semibold text-[0.8rem] md:text-[1rem]">
           <Link>DATA STRUCTURE</Link>
