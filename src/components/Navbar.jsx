@@ -12,7 +12,8 @@ export default function Navbar() {
 
     return (
         // <nav className='w-1/2 bg-white flex mx-auto' >
-        <nav className='w-screen md:w-1/2 mx-auto flex items-center justify-around md:mt-4 py-3 bg-[#f7f7f7] text-black tracking-wide shadow-xl z-50' >
+        // <nav className='w-screen md:w-1/2 mx-auto flex items-center justify-around md:mt-4 py-3 bg-[#f7f7f7] tracking-wide shadow-md z-50 md:rounded-full'>
+        <nav className='fixed inset-x-0 w-screen md:w-1/2 mx-auto flex items-center justify-around md:mt-4 py-3 bg-[#f7f7f7] tracking-wide shadow-md z-50 md:rounded-full'>
             <ul className='flex items-center mx-5'>
                 <li className='font-semibold text-[0.8rem] md:text-[1rem]'><Link>DATA STRUCTURE</Link></li>
                 <li className='ml-[20px] hover:text-black text-base hidden md:block '><Link className='active:font-bold' to={'/'}>HOME</Link></li>
@@ -22,8 +23,8 @@ export default function Navbar() {
                  
             </div>
             <div className='flex items-center'>
-                <BsGithub className='mx-2' style={{ fontSize: 20 }} onClick={githubLink} />
-                <BsLinkedin className='mx-2' style={{ fontSize: 20 }} onClick={inLink} />
+                <BsGithub className='mx-2 cursor-pointer' style={{ fontSize: 20 }} onClick={githubLink} />
+                <BsLinkedin className='mx-2 cursor-pointer' style={{ fontSize: 20 }} onClick={inLink} />
                 <Dropdown />
             </div>
         </nav>
