@@ -33,7 +33,7 @@ export default function Body(props) {
         <meta name="keywords" content={seoKeywords} />
       </Helmet>
       <div
-        className="h-auto md:h-screen py-5 flex items-center"
+        className="h-auto md:h-screen py-5 flex items-center pt-16"
         onClick={props.pgLink}
       >
         <div className="flex flex-col h-1/2 p-2 md:flex-row justify-center md:justify-around w-11/12 mx-auto items-center bg-white rounded-2xl shadow-md overflow-hidden">
