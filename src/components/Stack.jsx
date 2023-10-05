@@ -40,12 +40,12 @@ export default function Stack() {
   };
   return (
     <>
-      <div className="sm:ml-0 md:ml-[18rem] box-border flex flex-col justify-center items-center pt-[10vh] md:pt-[15vh]">
-        <div className="h-[40vh] w-11/12 md:h-[80vh] flex flex-col items-center">
-          <h1 className="text-xl md:text-4xl text-left font-bold m-3">
+      <div className="sm:ml-0 m-[10px] md:ml-[18rem] box-border flex flex-col justify-center items-center lg:mt-[10vh]">
+        <div className="h-[40vh] w-full lg:w-[80%] md:h-[80vh] flex flex-col items-center">
+          <h1 className="text-xl md:text-4xl text-left font-bold mt-3 mb-6">
             STACK OPERATION
           </h1>
-          <div className="box-border w-[95%] h-[80%] md:h-[80%] md:w-[70%] rounded-md flex flex-col items-center justify-center drop-shadow-2xl backdrop-blur-xl bg-gray-200 border-2 border-[#ff6633] md:bg-sky-200 ">
+          <div className="box-border w-[90%] h-[80%] md:h-[80%] rounded-md flex flex-col items-center justify-center drop-shadow-2xl backdrop-blur-xl bg-gray-200 border-2 border-[#ff6633] md:bg-sky-200 ">
             <input
               value={val}
               onChange={changes}

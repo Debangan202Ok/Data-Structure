@@ -2,27 +2,30 @@ import { Card, Typography, List, ListItem } from "@material-tailwind/react";
 
 export default function DefaultSidebar() {
   const toggleSidebar = () => {
-    const sidebar = document.querySelector(".side-bar"); // Escape the colon in the class name
-    sidebar.classList.toggle("hidden");
+    const sidebar = document.querySelector(".side-bar");
+    sidebar.classList.toggle("translate-x-[-100%]");
   };
 
   return (
-    <div className="fixed z-50">
+    <div className="fixed z-20">
       <div
         id="sidebarToggle"
-        className="md:hidden p-2 bg-gray-800 text-white cursor-pointer"
+        className="fixed md:hidden p-2 bg-gray-700 text-white cursor-pointer rounded-lg m-3 z-50"
         onClick={toggleSidebar}
       >
-        <button id="hamburger-menu" class="w-10 h-10 p-2 focus:outline-none">
-          <div class="w-6 h-px bg-white mb-1"></div>
-          <div class="w-6 h-px bg-white mb-1"></div>
-          <div class="w-6 h-px bg-white"></div>
+        <button
+          id="hamburger-menu"
+          className="w-10 h-10 p-2 focus:outline-none"
+        >
+          <div className="w-6 h-px bg-white mb-1"></div>
+          <div className="w-6 h-px bg-white mb-1"></div>
+          <div className="w-6 h-px bg-white"></div>
         </button>
       </div>
-      <Card className="side-bar hidden md:block h-[calc(100vh-48px)]  rounded w-[18rem] p-4 shadow-xl bg-[#f7f7f7] shadow-blue-gray-900/5">
-        <div className="mb-2 p-2">
+      <Card className="side-bar translate-x-[-100%] md:translate-x-[0%] md:block h-[calc(100vh-48px)] rounded-none w-[18rem] p-4 shadow-xl bg-[#f7f7f7] shadow-blue-gray-900/5">
+        <div className="ml-[50px] mb-[10px] p-2 md:ml-[0]">
           <Typography variant="h5" color="blue-gray">
-            Data Structures Lab
+            Data Structures Labs
           </Typography>
         </div>
         <List>
