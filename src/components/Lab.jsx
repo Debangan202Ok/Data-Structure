@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import Stack from "../components/Stack.jsx";
 import SideNavbar from "./SideNavbar.jsx";
-
+import Queue from "../components/Queue.jsx";
 export default function Lab() {
   return (
     <>
@@ -16,6 +16,10 @@ export default function Lab() {
       <div className="flex flex-row mt-[46px]">
         <SideNavbar />
         <Stack />
+      </div>
+      <div className="flex flex-row mt-[46px]">
+        <SideNavbar />
+        <Queue />
       </div>
     </>
   );
