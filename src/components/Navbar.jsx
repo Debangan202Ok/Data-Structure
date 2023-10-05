@@ -1,14 +1,17 @@
-import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import Dropdown from './dropdown';
+import Dropdown from "./dropdown";
 
 export default function Navbar() {
-    const githubLink = () => {
-        window.open('https://github.com/pauldebangan1970/Data-Structure', '_blank');
-    }
-    const inLink = () => {
-        window.open('https://www.linkedin.com/in/debangan-paul-chowdhury-2ba39822a/', '_blank');
-    }
+  const githubLink = () => {
+    window.open("https://github.com/pauldebangan1970/Data-Structure", "_blank");
+  };
+  const inLink = () => {
+    window.open(
+      "https://www.linkedin.com/in/debangan-paul-chowdhury-2ba39822a/",
+      "_blank"
+    );
+  };
 
     return (
         // <nav className='w-1/2 bg-white flex mx-auto' >

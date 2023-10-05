@@ -32,8 +32,8 @@ export default function Body(props) {
       <Helmet>
         <meta name="keywords" content={seoKeywords} />
       </Helmet>
-      <div className="h-auto md:h-auto py-5 flex items-center">
-        <motion.div
+      <div className="h-auto md:h-auto py-5 flex items-center" onClick={props.pgLink}>
+        <motion.div 
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           className="flex flex-col p-2 md:flex-row justify-center md:justify-evenly w-11/12 mx-auto items-center bg-white md:mt-32 rounded-2xl shadow-md"
