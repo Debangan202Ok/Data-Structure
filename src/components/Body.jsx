@@ -36,10 +36,7 @@ export default function Body(props) {
         className="h-auto md:h-screen py-5 flex items-center"
         onClick={props.pgLink}
       >
-        <motion.div
-          whileInView={{ x: 0, opacity: 1 }}
-          className="flex flex-col p-2 md:flex-row justify-center md:justify-around w-11/12 mx-auto items-center bg-white rounded-2xl shadow-md overflow-hidden"
-        >
+        <div className="flex flex-col h-1/2 p-2 md:flex-row justify-center md:justify-around w-11/12 mx-auto items-center bg-white rounded-2xl shadow-md overflow-hidden">
           <div className="flex-col p-2 w-[95%] h-auto md:w-[65%] order-2">
             <motion.h1
               initial={{ y: 50, opacity: 0 }}
@@ -83,7 +80,7 @@ export default function Body(props) {
             src={props.Imgs}
             alt=""
           />
-        </motion.div>
+        </div>
       </div>
     </>
   );
