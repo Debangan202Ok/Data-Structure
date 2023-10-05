@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Body(props) {
   const seoKeywords = [
@@ -32,17 +33,27 @@ export default function Body(props) {
         <meta name="keywords" content={seoKeywords} />
       </Helmet>
       <div
-        className="h-auto md:h-screen py-5 flex items-center"
+        className="h-auto md:h-screen py-5 flex items-center pt-16 md:pt-0"
         onClick={props.pgLink}
       >
-        <div className="flex flex-col p-2 md:flex-row justify-center md:justify-evenly items-center">
-          <div className={`flex-col p-2 w-[95%] h-auto  md:w-[65%] order-2 `}>
-            <h1 className="text-[20px] md:text-[30px] font-semibold text-black">
+        <div className="flex flex-col md:h-auto lg:h-3/4 xl:h-3/5 p-2 md:flex-row justify-center md:justify-evenly w-11/12 mx-auto items-center bg-white rounded-2xl shadow-md overflow-hidden">
+          <div className="flex-col p-2 w-[95%] h-auto md:w-[65%] order-2">
+            <motion.h1
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.6, delay: 0.1 }}
+              className="text-[20px] md:text-[30px] font-semibold text-black"
+            >
               {props.headQ}
-            </h1>
-            <p className="text-[#6a6a6a] text-[15px] my-3 text-justify md:text-[25px] ">
+            </motion.h1>
+            <motion.p
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.5, delay: 0.2 }}
+              className="text-[#6a6a6a] text-[15px] my-3 text-justify md:text-[20px] "
+            >
               {props.datas}
-            </p>
+            </motion.p>
             <div className={`flex flex-col md:flex-row ${props.btnPos} `}>
               <Link to={props.links} className="">
                 <button
@@ -61,7 +72,10 @@ export default function Body(props) {
               </Link>
             </div>
           </div>
-          <img
+          <motion.img
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 0.6 }}
             className={`my-5 w-[80%] md:w-[20%] order-1 `}
             src={props.Imgs}
             alt=""

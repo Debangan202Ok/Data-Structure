@@ -14,7 +14,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-screen flex items-center justify-evenly py-2 md:py-3 fixed bg-[#f7f7f7] text-black tracking-wide shadow-md top-0 z-50">
+    <nav className="fixed inset-x-0 w-screen md:w-1/2 mx-auto flex items-center justify-around md:mt-4 py-3 bg-[#f7f7f7] tracking-wide shadow-md z-50 md:rounded-full">
       <ul className="flex items-center mx-5">
         <li className="font-semibold text-[0.8rem] md:text-[1rem]">
           <Link>DATA STRUCTURE</Link>
@@ -30,14 +30,15 @@ export default function Navbar() {
           </Link>
         </li>
       </ul>
+      <div> </div>
       <div className="flex items-center">
         <BsGithub
-          className="mx-2"
+          className="mx-2 cursor-pointer"
           style={{ fontSize: 20 }}
           onClick={githubLink}
         />
         <BsLinkedin
-          className="mx-2"
+          className="mx-2 cursor-pointer"
           style={{ fontSize: 20 }}
           onClick={inLink}
         />
