@@ -7,8 +7,9 @@ export default function Lab() {
     const [val, setVal] = useState("");
     const [undoStack, setUndoStack] = useState([]);
     const [redoStack, setRedoStack] = useState([]);
-    const [valQueue, setValQueue] = useState("");
-    const [undoQueue, setUndoQueue] = useState([]);
+    const [valQueue, setValQueue] = useState([]);
+    const [undoQueue, setUndoQueue] = useState("");
+    // eslint-disable-next-line no-unused-vars
     const [redoQueue, setRedoQueue] = useState([]);
     const changes = (e) => {
         setVal(e.target.value);
@@ -17,24 +18,23 @@ export default function Lab() {
     };
     const changesQueue = (e) => {
         const newValue = e.target.value;
-        setValQueue(newValue); // Set the new value.
-        setUndoQueue((prevUndoQueue) => [...prevUndoQueue, newValue]); // Add the new value to the undo queue.
+        // setValQueue(newValue); // Set the new value.
+        setUndoQueue(newValue);
         setRedoQueue([]); // Clear the redo queue.
-    }
-    
+    };
 
     const redoBtnQueue = () => {
-        if (redoQueue.length === 0) {
+        if (valQueue.length === 0) {
             alert("Nothing to redo in Queue");
             return;
         }
-        const nextVal = redoQueue[0];
-        const newRedoQueue = redoQueue.slice(1);
-        setValQueue(nextVal); // Set to the next value.
-        setUndoQueue((prevUndoQueue) => [...prevUndoQueue, valQueue]); // Add the current value to the undo queue.
-        setRedoQueue(newRedoQueue);
-    }
-    
+        const element = valQueue.pop();
+        const updatedArr = [...valQueue];
+        const updatedStr = element + undoQueue;
+        setValQueue(updatedArr); // Set to the next value.
+        setUndoQueue(updatedStr); 
+    };
+
     const redoBtnStack = () => {
         if (redoStack.length === 0) {
             alert("nothing to redo in Stack");
@@ -47,8 +47,8 @@ export default function Lab() {
         setRedoStack(newRedoStack);
     };
     const resetQueue = () => {
-        setValQueue("");
-        setUndoQueue([]);
+        setValQueue([]);
+        setUndoQueue("");
         setRedoQueue([]);
     };
     const undoBtnQueue = () => {
@@ -56,24 +56,13 @@ export default function Lab() {
             alert("Nothing to undo in Queue");
             return;
         }
+        const firstLetter = undoQueue[0];
+        const substr = undoQueue.substring(1);
         
-        // Get the front element of the queue.
-        const nextVal = undoQueue[0];
-        
-        // Remove the front element from the queue.
-        const newUndoQueue = undoQueue.slice(1);
-        
-        // Set the value to the retrieved value.
-        setValQueue(nextVal);
-        
-        // Update the undoQueue without the front element.
-        setUndoQueue(newUndoQueue);
-        
-        // Add the current value to the redoQueue.
-        setRedoQueue((prevRedoVal) => [...prevRedoVal, valQueue]);
-    
-    }
-    
+        setValQueue(prevState=>[...prevState,firstLetter]);
+        setUndoQueue(substr);
+    };
+
     const undoBtnStack = () => {
         if (undoStack.length === 0) {
             alert("nothing to undo in Stack");
@@ -162,7 +151,7 @@ export default function Lab() {
                     </h1>
                     <div className="box-border w-[95%] h-[80%] md:h-[80%] md:w-[70%] rounded-md flex flex-col items-center justify-center drop-shadow-2xl backdrop-blur-xl bg-gray-200 border-2 border-[#ff6633] md:bg-sky-200 ">
                         <input
-                            value={valQueue}
+                            value={undoQueue}
                             onChange={changesQueue}
                             type="text"
                             placeholder="Enter your text"
