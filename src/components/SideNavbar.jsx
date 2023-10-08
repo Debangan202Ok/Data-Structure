@@ -31,7 +31,7 @@ export default function DefaultSidebar() {
         <List>
           <ListItem>Stack</ListItem>
           <ListItem>Queue</ListItem>
-          <ListItem>Linekd List</ListItem>
+          <ListItem>Linked List</ListItem>
           <ListItem>Tree</ListItem>
           <ListItem>Graph</ListItem>
         </List>
