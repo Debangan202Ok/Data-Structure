@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet";
-import Stack from "../components/Stack.jsx";
 import SideNavbar from "./SideNavbar.jsx";
-export default function Lab() {
+import LinkedList from "../components/LinkedList.jsx";
+export default function Lab1() {
   return (
     <>
       <Helmet>
-        <title>Data Structure -lab</title>
+        <title>Data Structure -lab1</title>
         <meta charSet="utf-8" />
         <meta
           name="description"
@@ -14,9 +14,8 @@ export default function Lab() {
       </Helmet>
       <div className="flex flex-row mt-[46px]">
         <SideNavbar />
-        <Stack />z
+        <LinkedList />
       </div>
-    
     </>
   );
 }
