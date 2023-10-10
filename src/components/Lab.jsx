@@ -13,7 +13,7 @@ export default function Lab() {
           content="Discover the real-life applications of data structures and their significance in various domains. Explore how data structures such as arrays, linked lists, trees, graphs, and hash tables are used in designing efficient algorithms, optimizing database systems, building search engines, developing social networks, and solving complex computational problems. Learn how mastering data structures can enhance software performance, improve memory utilization, and enable robust data management."
         />
       </Helmet>
-      <div className="flex flex-row mt-[46px]">
+      <div className="flex flex-row">
         <SideNavbar />
         <Stack />
       </div>
