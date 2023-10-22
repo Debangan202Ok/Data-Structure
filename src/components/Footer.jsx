@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://github.com/datastructureapp"
+                  href="https://github.com/Debangan202Ok/Data-Structure"
                   class="text-gray-400 hover:text-white"
                 >
                   <i class="fa fa-github"></i> GitHub
