@@ -43,6 +43,7 @@ const Footer = () => {
                 <a
                   href="https://twitter.com/datastructureapp"
                   class="text-gray-400 hover:text-white"
+                  target="_blank"
                 >
                   <i class="fa fa-twitter"></i> Twitter
                 </a>
@@ -51,6 +52,7 @@ const Footer = () => {
                 <a
                   href="https://github.com/Debangan202Ok/Data-Structure"
                   class="text-gray-400 hover:text-white"
+                  target="_blank"
                 >
                   <i class="fa fa-github"></i> GitHub
                 </a>
@@ -59,6 +61,7 @@ const Footer = () => {
                 <a
                   href="https://discord.gg/datastructureapp"
                   class="text-gray-400 hover:text-white"
+                  target="_blank"
                 >
                   <i class="fa fa-discord"></i> Discord
                 </a>
