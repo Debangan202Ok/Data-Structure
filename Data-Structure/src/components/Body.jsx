@@ -37,7 +37,7 @@ export default function Body(props) {
         onClick={props.pgLink}
       >
         <div className="flex flex-col md:h-auto lg:h-3/4 xl:h-3/5 p-2 md:flex-row justify-center md:justify-evenly w-11/12 mx-auto items-center bg-white rounded-2xl shadow-md overflow-hidden">
-          <div className="flex-col p-2 w-[95%] h-auto md:w-[65%] order-2">
+          <div className="flex-col p-2 w-full md:w-3/5 order-2">
             <motion.h1
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -50,7 +50,7 @@ export default function Body(props) {
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeOut", duration: 0.5, delay: 0.2 }}
-              className="text-[#6a6a6a] text-[15px] my-3 text-justify md:text-[20px] "
+              className="text-[#6a6a6a] text-base md:text-[20px] my-3 text-justify"
             >
               {props.datas}
             </motion.p>
