@@ -1,6 +1,6 @@
 import { Card, Typography, List, ListItem } from "@material-tailwind/react";
 
-export default function DefaultSidebar() {
+export default function DefaultSidebar({ selectedOption, onSelectOption }) {
   const toggleSidebar = () => {
     const sidebar = document.querySelector(".side-bar");
     sidebar.classList.toggle("hidden");
@@ -29,11 +29,37 @@ export default function DefaultSidebar() {
           </Typography>
         </div>
         <List>
-          <ListItem>Stack</ListItem>
-          <ListItem>Queue</ListItem>
-          <ListItem>Linked List</ListItem>
-          <ListItem>Tree</ListItem>
-          <ListItem>Graph</ListItem>
+          <ListItem>
+            <button
+              onClick={() => onSelectOption("stack")}>
+              Stack
+            </button>
+          </ListItem>
+          <ListItem>
+            <button
+              onClick={() => onSelectOption("queue")}>
+              Queue
+            </button>
+          </ListItem>
+          <ListItem>
+            <button
+              onClick={() => onSelectOption("linked_list")}>
+              Linked List
+            </button>
+          </ListItem>
+          <ListItem>
+            <button
+              onClick={() => onSelectOption("tree")}>
+              Tree
+            </button>
+          </ListItem>
+          <ListItem>
+            <button
+              onClick={() => onSelectOption("graph")}>
+              Graph
+            </button>
+          </ListItem>
+
         </List>
       </Card>
     </div>

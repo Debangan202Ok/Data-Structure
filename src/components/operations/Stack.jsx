@@ -45,7 +45,7 @@ export default function Stack() {
           <h1 className="text-xl md:text-4xl text-left font-bold mt-3 mb-6">
             STACK OPERATION
           </h1>
-          <div className="box-border w-[90%] h-[80%] md:h-[80%] rounded-md flex flex-col items-center justify-center drop-shadow-2xl backdrop-blur-xl bg-gray-200 border-2 border-[#ff6633] md:bg-sky-200 ">
+          <div className="box-border w-[90%] h-[80%] md:h-[80%] rounded-md flex flex-col items-center justify-center drop-shadow-2xl backdrop-blur-xl bg-gray-200 border-2 md:bg-sky-200 ">
             <input
               value={val}
               onChange={changes}
@@ -72,7 +72,7 @@ export default function Stack() {
             </div>
           </div>
         </div>
-        <div className="box-border border-2 border-[#ff6633] w-[90%] flex flex-col rounded-md bg-slate-100 p-5 my-10 shadow-md">
+        <div className="box-border border-2 w-[90%] flex flex-col rounded-md bg-slate-100 p-5 my-10 shadow-md">
           <h1 className="text-2xl font-bold">HOW IT WORK?</h1>
           <p className="text-justify text-[#6a6a6a] font-sans">
             we are using React hooks useState to manage the state of actions,
