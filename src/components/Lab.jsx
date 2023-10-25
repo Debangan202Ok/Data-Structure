@@ -50,6 +50,7 @@ export default function Lab() {
           )}
         </div>
       </div>
+    
     </>
   );
 }

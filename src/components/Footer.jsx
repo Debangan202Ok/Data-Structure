@@ -43,14 +43,16 @@ const Footer = () => {
                 <a
                   href="https://twitter.com/datastructureapp"
                   class="text-gray-400 hover:text-white"
+                  target="_blank"
                 >
                   <i class="fa fa-twitter"></i> Twitter
                 </a>
               </li>
               <li>
                 <a
-                  href="https://github.com/datastructureapp"
+                  href="https://github.com/Debangan202Ok/Data-Structure"
                   class="text-gray-400 hover:text-white"
+                  target="_blank"
                 >
                   <i class="fa fa-github"></i> GitHub
                 </a>
@@ -59,6 +61,7 @@ const Footer = () => {
                 <a
                   href="https://discord.gg/datastructureapp"
                   class="text-gray-400 hover:text-white"
+                  target="_blank"
                 >
                   <i class="fa fa-discord"></i> Discord
                 </a>
@@ -69,7 +72,7 @@ const Footer = () => {
       </div>
       <div class="text-center mt-8 mb-2 lg:mt-16">
         <p class="text-gray-400 text-xs">
-          Copyright © 2023 DataStructure. All rights reserved.
+          Copyright ©2023 DataStructure. All rights reserved.
         </p>
       </div>
     </footer>
