@@ -72,7 +72,7 @@ const Footer = () => {
       </div>
       <div class="text-center mt-8 mb-2 lg:mt-16">
         <p class="text-gray-400 text-xs">
-          Copyright © 2023 DataStructure. All rights reserved.
+          Copyright ©2023 DataStructure. All rights reserved.
         </p>
       </div>
     </footer>

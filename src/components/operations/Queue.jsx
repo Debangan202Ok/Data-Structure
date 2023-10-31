@@ -4,48 +4,50 @@ import { useState } from "react";
 
 export default function Stack() {
   const [val, setVal] = useState("");
-  const [undoStack, setUndoStack] = useState([]);
-  const [redoStack, setRedoStack] = useState([]);
+  const [undoQueue, setUndoQueue] = useState([]);
+  const [redoQueue, setRedoQueue] = useState([]);
+
   const changes = (e) => {
-    setVal(e.target.value);
-    setUndoStack((prevUndoStack) => [...prevUndoStack, val]);
-    setRedoStack([]);
+    const newValue = e.target.value;
+    setVal(newValue);
+    setUndoQueue((prevUndoQueue) => [newValue, ...prevUndoQueue]);
+    setRedoQueue([]);
   };
+
   const undoBtn = () => {
-    if (undoStack.length === 0) {
-      alert("nothing to undo");
+    if (undoQueue.length === 0) {
+      alert("Nothing to undo");
       return;
     }
-    const previousVal = undoStack[undoStack.length - 1];
-    const newUndoStack = undoStack.slice(0, undoStack.length - 1);
+    const previousVal = undoQueue.shift(); // Remove the first item from the queue
     setVal(previousVal);
-    setUndoStack(newUndoStack);
-    setRedoStack((prevRedoVal) => [...prevRedoVal, val]);
+    setRedoQueue((prevRedoQueue) => [val, ...prevRedoQueue]); // Add current value to redo queue
   };
+
   const redoBtn = () => {
-    if (redoStack.length === 0) {
-      alert("nothing to redo");
+    if (redoQueue.length === 0) {
+      alert("Nothing to redo");
       return;
     }
-    const newVal = redoStack[redoStack.length - 1];
-    const newRedoStack = redoStack.slice(0, redoStack.length - 1);
+    const newVal = redoQueue.shift(); // Remove the first item from the redo queue
     setVal(newVal);
-    setUndoStack((prevUndoStack) => [...prevUndoStack, val]);
-    setRedoStack(newRedoStack);
+    setUndoQueue((prevUndoQueue) => [val, ...prevUndoQueue]); // Add current value to undo queue
   };
+
   const reset = () => {
     setVal("");
-    setUndoStack([]);
-    setRedoStack([]);
+    setUndoQueue([]);
+    setRedoQueue([]);
   };
+
   return (
     <>
       <div className="md:ml-[10px] mt-[80px] box-border flex flex-col justify-center items-center lg:mt-[10vh]">
         <div className="h-[40vh] w-full lg:w-[80%] md:h-[80vh] flex flex-col items-center">
           <h1 className="text-xl md:text-4xl text-left font-bold mt-3 mb-6">
-            STACK OPERATION
+            QUEUE OPERATION
           </h1>
-          <div className="box-border w-[90%] h-[80%] md:h-[80%] rounded-md flex flex-col items-center justify-center drop-shadow-2xl backdrop-blur-xl bg-gray-200 border-2 border-[#ff6633] md:bg-sky-200 ">
+          <div className="box-border w-[90%] h-[80%] md:h-[80%] rounded-md flex flex-col items-center justify-center drop-shadow-2xl backdrop-blur-xl bg-gray-200 border-2 md:bg-sky-200 ">
             <input
               value={val}
               onChange={changes}
@@ -72,16 +74,15 @@ export default function Stack() {
             </div>
           </div>
         </div>
-        <div className="box-border border-2 border-[#ff6633] w-[90%] flex flex-col rounded-md bg-slate-100 p-5 my-10 shadow-md">
+        <div className="box-border border-2 w-[90%] flex flex-col rounded-md bg-slate-100 p-5 my-10 shadow-md">
           <h1 className="text-2xl font-bold">HOW IT WORK?</h1>
           <p className="text-justify text-[#6a6a6a] font-sans">
             we are using React hooks useState to manage the state of actions,
-            undo stack, and redo stack. The performAction function adds a new
-            action to the actions state and updates the undo and redo stacks
+            undo queue, and redo queue using FIFO concept. The performAction function adds a new
+            action to the actions state and updates the undo and redo queues
             accordingly. The undo function removes the last action from the undo
-            stack, adds it to the redo stack, and updates the actions state.
-            Similarly, the redo function removes the last action from the redo
-            stack, adds it to the undo stack, and updates the actions state.
+            queue, adds it to the redo queue, and updates the actions state.
+            Similarly, the redo function removes the first action from the redo
           </p>
           <p className="text-justify text-[#6a6a6a] font-sans">
             You can use this UndoRedoExample component in your React application
